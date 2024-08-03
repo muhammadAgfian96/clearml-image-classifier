@@ -1,3 +1,4 @@
+
 # ClearML-TIMM-Image-Classifier Template 🚀
 
 ![Python](https://img.shields.io/badge/python-3.12-blue.svg)
@@ -13,21 +14,58 @@ A reproducible template for image classification using ClearML, PyTorch Lightnin
 - **ClearML**: For experiment management and tracking.
 - **TIMM**: For access to a wide range of pre-trained models.
 
-## ✨ Features
-- [ ] **Input Data**: Integration with CVAT for data annotation.
-- [ ] **Input Data**: Integration with Minio/S3 storage for data management.
-- [ ] **Input Model**: Transfer learning from other ClearML experiments with the same architecture.
-- [ ] **Process**: Easy model selection and training with TIMM.
-- [ ] **Process**: Hyperparameter optimization using Optuna for grid search.
-- [ ] **Output**: Storage of raw artifacts and ONNX models in blob storage.
-- [ ] **Output**: Basic graphs for monitoring the deep learning process.
-- [ ] **Data Augmentation**: Implement common data augmentation techniques to improve model robustness.
-- [ ] **Model Evaluation**: Include detailed evaluation metrics and visualization tools.
-- [ ] **Deployment**: Provide scripts or guidelines for deploying the trained model.
-- [ ] **Logging and Monitoring**: Integrate with logging and monitoring tools like TensorBoard or ClearML's dashboard.
-- [ ] **Custom Callbacks**: Allow users to add custom callbacks for more control over the training process.
-- [ ] **Multi-GPU/TPU Support**: Ensure the template supports distributed training on multiple GPUs or TPUs.
-- [ ] **Documentation**: Comprehensive documentation for each module and feature.
+## ✨ Features (Todo List)
+1. [ ] **Input Data**: Integration with CVAT for data annotation.
+   - Potential libraries: CVAT API, PyTorch
+2. [ ] **Input Data**: Integration with Minio/S3 storage for data management.
+   - Potential libraries: Minio SDK, boto3
+3. [ ] **Data Quality Check for Image Classification**
+   - Potential libraries: OpenCV, Pillow, Imagehash
+   - Implement checks for class balance, image resolution, duplicates, and outliers
+4. [ ] **Data Augmentation Library**
+   - Potential libraries: Albumentations, imgaug, TorchVision.transforms
+   - Create a comprehensive set of image-specific augmentations
+5. [ ] **Transfer Learning Optimization**
+   - Potential libraries: TIMM, PyTorch
+   - Implement gradual unfreezing and discriminative fine-tuning
+6. [ ] **Input Model**: Transfer learning from other ClearML experiments with the same architecture.
+   - Potential libraries: ClearML, PyTorch
+7. [ ] **Process**: Easy model selection and training with TIMM.
+   - Potential libraries: TIMM, PyTorch Lightning
+8. [ ] **Automated Hyperparameter Tuning**
+   - Potential libraries: Optuna, Ray Tune
+   - Set up advanced search strategies for hyperparameters
+9. [ ] **Model Architecture Search**
+   - Potential libraries: TIMM, Optuna
+   - Implement automated search for optimal model architectures
+10. [ ] **Output**: Storage of raw artifacts and ONNX models in blob storage.
+    - Potential libraries: ONNX, ClearML
+11. [ ] **Output**: Basic graphs for monitoring the deep learning process.
+    - Potential libraries: Matplotlib, Seaborn, Plotly
+12. [ ] **Automate Report Generation**
+    - Potential libraries: Matplotlib, Seaborn, Plotly, Gradio
+    - Create comprehensive reports with visualizations and interactive demos
+13. [ ] **Model Evaluation**: Include detailed evaluation metrics and visualization tools.
+    - Potential libraries: scikit-learn, Matplotlib
+14. [ ] **Active Learning Integration**
+    - Potential libraries: PyTorch, CVAT/Label Studio
+    - Implement uncertainty sampling and diversity sampling strategies
+15. [ ] **Automated Model Ensembling**
+    - Potential libraries: PyTorch, TIMM
+    - Create voting and weighted ensembles of image classifiers
+16. [ ] **Embedding Output Clustering**
+    - Potential libraries: Faiss, UMAP, HDBSCAN
+    - Implement clustering of model embeddings for analysis and visualization
+17. [ ] **Deployment**: Provide scripts or guidelines for deploying the trained model.
+    - Potential libraries: Flask, FastAPI, TorchServe
+18. [ ] **Logging and Monitoring**: Integrate with logging and monitoring tools like TensorBoard or ClearML's dashboard.
+    - Potential libraries: TensorBoard, ClearML
+19. [ ] **Custom Callbacks**: Allow users to add custom callbacks for more control over the training process.
+    - Potential libraries: PyTorch Lightning
+20. [ ] **Multi-GPU/TPU Support**: Ensure the template supports distributed training on multiple GPUs or TPUs.
+    - Potential libraries: PyTorch Lightning, Horovod
+21. [ ] **Documentation**: Comprehensive documentation for each module and feature.
+    - Potential tools: Sphinx, MkDocs
 
 ## 🛠️ Installation
 
@@ -68,9 +106,9 @@ clearml-init
 - **Hyperparameter Optimization**: How to use Optuna for grid search.
 
 ### 🏃‍♂️ Running the Training
-bash
+```bash
 python train.py --config configs/default.yaml
-
+```
 
 ## ⚙️ Configuration
 - Detailed explanation of configuration options available in `configs/default.yaml`.
